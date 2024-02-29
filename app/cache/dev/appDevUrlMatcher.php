@@ -133,19 +133,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/practica1/articulo')) {
-            // arsoft_demo_practica1_tarea1
-            if ($pathinfo === '/practica1/articulos') {
-                return array (  '_controller' => 'ARSOFT\\DemoBundle\\Controller\\DefaultController::tarea1Action',  '_route' => 'arsoft_demo_practica1_tarea1',);
-            }
-
-            // arsoft_demo_practica1_tarea2
-            if (preg_match('#^/practica1/articulo/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'arsoft_demo_practica1_tarea2')), array (  '_controller' => 'ARSOFT\\DemoBundle\\Controller\\DefaultController::tarea2Action',));
-            }
-
-        }
-
         if (0 === strpos($pathinfo, '/articulo')) {
             // arsoft_demo_practica2_tarea1
             if ($pathinfo === '/articulos') {
@@ -155,6 +142,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // arsoft_demo_practica2_tarea2
             if (preg_match('#^/articulo(?:/(?P<id>\\d{1,2}))?$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'arsoft_demo_practica2_tarea2')), array (  '_controller' => 'ARSOFT\\DemoBundle\\Controller\\ListarController::tarea2Action',  'id' => 2,));
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/practica1/articulo')) {
+            // arsoft_demo_practica1_tarea1
+            if ($pathinfo === '/practica1/articulos') {
+                return array (  '_controller' => 'ARSOFT\\DemoBundle\\Controller\\DefaultController::tarea1Action',  '_route' => 'arsoft_demo_practica1_tarea1',);
+            }
+
+            // arsoft_demo_practica1_tarea2
+            if (preg_match('#^/practica1/articulo/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'arsoft_demo_practica1_tarea2')), array (  '_controller' => 'ARSOFT\\DemoBundle\\Controller\\DefaultController::tarea2Action',));
             }
 
         }

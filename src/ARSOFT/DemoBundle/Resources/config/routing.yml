@@ -1,16 +1,18 @@
+
+#****************************** * * EMMA PG * * *******************************#
   
 #******************************************************************************#
 #***************************** * * Practica 2 * * *****************************#
 #******************************************************************************#
 
 #******************************* * * Tarea 1 * * ******************************#
-#Ruta: http://localhost/practica-2-ARSOFT-23-24/web/app_dev.php/articulos
+#Ruta: http://localhost/practica2-ARSOFT-23-24/web/app_dev.php/articulos
 arsoft_demo_practica2_tarea1:
     pattern:  /articulos
     defaults: { _controller: ARSOFTDemoBundle:Listar:tarea1 }
     
 #******************************* * * Tarea 2 * * ******************************#
-#Ruta: http://localhost/practica-2-ARSOFT-23-24/web/app_dev.php/articulos/1
+#Ruta: http://localhost/practica2-ARSOFT-23-24/web/app_dev.php/articulo/1
 arsoft_demo_practica2_tarea2:
     pattern:  /articulo/{id} 
     defaults: { _controller: ARSOFTDemoBundle:Listar:tarea2, id:2  }   
@@ -25,14 +27,14 @@ arsoft_demo_practica2_tarea2:
 #******************************************************************************#
 
 #******************************* * * Tarea 1 * * ******************************#
-#Ruta: http://localhost/practica-2-ARSOFT-23-24/web/app_dev.php/practica1/articulos
+#Ruta: http://localhost/practica2-ARSOFT-23-24/web/app_dev.php/practica1/articulos
 
 arsoft_demo_practica1_tarea1:
     pattern:  /practica1/articulos
     defaults: { _controller: ARSOFTDemoBundle:Default:tarea1 } 
     
 #******************************* * * Tarea 2 * * ******************************#
-#Ruta: http://localhost/practica-2-ARSOFT-23-24/web/app_dev.php/practica1/articulos/1
+#Ruta: http://localhost/practica2-ARSOFT-23-24/web/app_dev.php/practica1/articulos/1
 
 arsoft_demo_practica1_tarea2:
     pattern:  /practica1/articulo/{id} 
