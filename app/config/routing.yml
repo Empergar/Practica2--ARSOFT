@@ -1,0 +1,4 @@
+arsoft_demo:
+    resource: "@ARSOFTDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+

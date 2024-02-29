@@ -1,0 +1,47 @@
+{# templates/articulos/listarArticulos.html.twig #}
+<head>
+    <title>Practica 2</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+</head>
+
+<body>
+<h1>Listado de Articulos</h1>
+
+<!-- Apartado para el nombre del alumno y el nombre de la universidad -->
+<div class="informacion-academica">
+    <p>Nombre del Alumno: Emma Pérez García</p>
+    <p>Asignatura: Arquitectura del software</p>
+    <p>Nombre de la Universidad: Universidad Pontificia de Salamanca</p>
+</div>
+
+<!-- Hacer el listado en formato tabla -->
+
+<table>
+<tr>
+    <!--Por cambiar-->
+    <!--<th>ID</th>-->
+    <th>Título</th>
+    <th>Acciones</th>
+</tr>
+{% for articulo in articulos %}
+<tr>
+    <!--<td>{{ articulo.id }}</td>-->
+    <td>{{ articulo.title }}</a></td>
+    <!--<td><a href="{{ path('arsoft_demo_practica2_tarea2', {'id': articulo.id}) }}">{{ articulo.title }}</a></td> -->
+    <td><a href="{{ path('arsoft_demo_practica2_tarea2', {'id': articulo.id}) }}">Ver Artículo</a></td>
+</tr>
+{% endfor %}
+</table>
+
+<!-- Hacer el listado en formato lista -->
+<!--
+<ul>
+    {% for articulo in articulos %}
+    <li>
+        <strong>{{ articulo.title }}</strong> - 
+        <a href="{{ path('arsoft_demo_practica2_tarea2', {'id': articulo.id}) }}">Ver Artículo</a>
+    </li>
+    {% endfor %}
+</ul> -->
+    
+</body>
